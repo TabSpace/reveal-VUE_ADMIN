@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+
+<title>如何学习VUE</title>
+
+<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+<meta name="author" content="Hakim El Hattab">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<link rel="stylesheet" href="css/reveal.css">
+<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+<!-- Theme used for syntax highlighting of code -->
+<link rel="stylesheet" href="lib/css/zenburn.css">
+
+<!-- Printing and PDF exports -->
+<script>
+var link = document.createElement( 'link' );
+link.rel = 'stylesheet';
+link.type = 'text/css';
+link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+document.getElementsByTagName( 'head' )[0].appendChild( link );
+</script>
+
+<!--[if lt IE 9]>
+<script src="lib/js/html5shiv.js"></script>
+<![endif]-->
+
+<style>
+.tl{
+	text-align: left;
+}
+.reveal h2{
+	text-transform: none;
+}
+</style>
+</head>
+
+<body>
+<div class="reveal">
+<!-- Any section element inside of this container is displayed as a slide -->
+<div class="slides">
+
+<section>
+	<h1>如何学习VUE</h1>
+	<p>
+		<small>
+			<a target="_blank" href="https://github.com/TabSpace">github.com/TabSpace</a>
+		</small>
+	</p>
+</section>
+
+<section>
+	<h2>授人以鱼，不如授人以渔</h2>
+</section>
+
+<section>
+	<h2>前端知识有下面几种</h2>
+	<p>请按对个人的重要程度排序</p>
+	<ul>
+		<li>框架API</li>
+		<li>WEB基础知识(DOM,CSS,标准与规范)</li>
+		<li>浏览器兼容性</li>
+		<li>项目管理/体验优化</li>
+		<li>方法论/实践模式</li>
+		<li>代码设计思想/设计模式</li>
+	</ul>
+</section>
+
+<section>
+	<h2>这是我的排序</h2>
+	<p>有疑问请举手</p>
+	<ol style="padding-left: 1em;">
+		<li>方法论/实践模式</li>
+		<li>项目管理/体验优化</li>
+		<li>代码设计思想/设计模式</li>
+		<li>WEB基础知识(DOM,CSS,标准与规范)</li>
+		<li>框架API</li>
+		<li>浏览器兼容性</li>
+	</ol>
+</section>
+
+<section>
+	<h2>技术知识构成</h2>
+	<ul style="width:50%; overflow:hidden; float:left;">
+		<li>从上到下，是指导</li>
+		<li>从下到上，是沉淀</li>
+		<li>从上到下，更贴近客观</li>
+		<li>从下到上，更贴近主观</li>
+		<li>从上到下，更新越快</li>
+		<li>从下到上，个人差异性更大</li>
+		<li>从下到上，更难以传递</li>
+		<li>从下到上，更需要依靠自己</li>
+	</ul>
+	<ol style="width:40%; overflow:hidden; padding-left: 1em; float:right; font-size: 28px;">
+		<li>方法论/实践模式</li>
+		<li>项目管理/体验优化</li>
+		<li>代码设计思想/设计模式</li>
+		<li>WEB基础知识(DOM,CSS,标准与规范)</li>
+		<li>框架API</li>
+		<li>浏览器兼容性</li>
+	</ol>
+</section>
+
+<section>
+	<h2>实战讲解</h2>
+</section>
+
+<section>
+	<h2>项目概况</h2>
+	<ul>
+		<li>企鹅智家管理系统</li>
+		<li>规模：16个页面，其中5个有复杂交互</li>
+		<li>时间：9月24-10月20</li>
+		<li>前后台并行开发</li>
+		<li>3个前端，其中1个外包</li>
+		<li>要求兼容IE9</li>
+		<li>不算测试，完成构建,开发,联调,部署</li>
+	</ul>
+</section>
+
+<section>
+	<h2>项目实施概况</h2>
+	<ul>
+		<li>连带加班19个工作日</li>
+		<li>48个接口</li>
+		<li>110个模块文件(js,vue,less)</li>
+		<li>12524行代码(样式只有500多行)</li>
+	</ul>
+</section>
+
+<section>
+	<h2>个人实施概况</h2>
+	<ul>
+		<li>项目开始前未使用过VUE</li>
+		<li>项目启动前3天时间熟悉框架</li>
+		<li>并行：项目启动前1天时间定规范</li>
+		<li>项目启动后2天时间协调成员做开发准备</li>
+		<li>并行：项目启动后2天时间搭建框架</li>
+		<li>1天时间写demo</li>
+		<li>7天时间用在Mock数据设计</li>
+		<li>2天时间解决静态文件部署问题</li>
+		<li>剩下7天时间，解决最复杂的10个模块中的5个</li>
+		<li>期间指导其他成员解决问题</li>
+	</ul>
+</section>
+
+<section>
+	<h2>如何在3天内学会VUE</h2>
+	<p>并可以在组员面前装X</p>
+</section>
+
+<section>
+	<h2>冰冻三尺，非一日之寒</h2>
+	<p>思考：如果没有Vue,React,Angular等框架</p>
+	<p>如何基于MVC与函数式思想开发项目</p>
+	<ul>
+		<li>3天只是真正认真看VUE相关API的时间</li>
+		<li>对MVC思想早已熟悉，并大量实践于以往项目</li>
+		<li>对VUE原理早有所理解</li>
+		<li>大致看过VUE基本Demo</li>
+		<li>了解过一些VUE周边技术栈</li>
+		<li>当然仅有这些，是不能用来决定项目架构的</li>
+	</ul>
+</section>
+
+<section>
+	<h2>DAY1：基础</h2>
+	<ul>
+		<li>再熟悉一遍VUE基本概念</li>
+		<li>方法论与代码设计思想指导文档阅读</li>
+		<li>MVC的核心思想是观察者模式，属性监听</li>
+		<li>属性要可计算，可过滤，可观察</li>
+		<li>要了解如何渲染列表</li>
+		<li>事件与属性如何绑定</li>
+	</ul>
+</section>
+
+<section>
+	<h2>DAY2：模块化</h2>
+	<ul>
+		<li>需要组件化，那么如何注册组件？</li>
+		<li>组件需要通信，那么一般通信方式？（单向通信，prop，自定义事件，bus）</li>
+		<li>公共状态如何管理？(vuex)</li>
+		<li>其他独特功能：插槽</li>
+		<li>如何全局调用？混合，插件</li>
+	</ul>
+</section>
+
+<section>
+	<h2>DAY3：规范化</h2>
+	<ul>
+		<li>有快速脚手架吗？上手vue-cli</li>
+		<li>脚手架都有什么功能？熟悉内置webpack配置</li>
+		<li>如何通过路由组织模块？(vue-router)</li>
+		<li>不能一次加载所有js，如何按需加载？</li>
+	</ul>
+</section>
+
+<section>
+	<h2>项目启动日</h2>
+	<p>好了，同学们，我刚刚过了下这个框架巴拉巴拉~~</p>
+</section>
+
+<section>
+	<h2>技术选型</h2>
+	<p>最重要的东西是什么？</p>
+</section>
+
+<section>
+	<h2>项目启动会议，做技术协调</h2>
+	<ul>
+		<li>Step1: 大家都已经熟悉了什么？</li>
+		<li>Step2: 其他人一般都怎么做？</li>
+		<li>Step3: 做个例子给大家看</li>
+	</ul>
+</section>
+
+<section>
+	<h2>省时间的诀窍</h2>
+	<p>不要重复造轮子</p>
+	<ul>
+		<li>资源入口1: <a target="_blank" href="https://github.com/vuejs/awesome-vue">awesome-vue</a></li>
+		<li>github有很多awesome-xxx</li>
+	</ul>
+</section>
+
+<section>
+	<h2>上好轮子哪里找？</h2>
+	<ul>
+		<li>资源入口2: <a target="_blank" href="https://npms.io/">npms.io</a></li>
+		<li>注意不是 npmjs.com</li>
+	</ul>
+	<img src="images/npms-vue.jpg" />
+</section>
+
+<section>
+	<h2>轮子要持续积累和更新</h2>
+	<p>例如使用<a target="_blank" href="http://naotu.baidu.com/">百度脑图</a>整理资源</p>
+	<img src="images/fe-mind.jpg" />
+</section>
+
+<section>
+	<h2>技术定型</h2>
+	<ul>
+		<li>接口请求使用<a target="_blank" href="https://github.com/axios/axios">axios</a></li>
+		<li>UI使用<a target="_blank" href="https://github.com/ElemeFE/element">element ui</a></li>
+		<li>用<a target="_blank" href="https://github.com/yangmingshan/vue-bus">vue-bus</a>做广播</li>
+		<li>用<a target="_blank" href="https://github.com/ecomfe/echarts">echarts</a>做图表</li>
+		<li>用<a target="_blank" href="https://github.com/lodash/lodash">lodash</a>作为基本工具库</li>
+		<li>用<a target="_blank" href="https://github.com/hilongjw/vue-progressbar">vue-progressbar</a>提供进度显示</li>
+		<li>个人开发spore-kit-xxx作补充</li>
+	</ul>
+</section>
+
+<section>
+	<h2>规范制定</h2>
+</section>
+
+<section>
+	<h2>Eslint</h2>
+	<ul>
+		<li>用<a target="_blank" href="http://eslint.cn/">eslint</a>来检查代码</li>
+		<li>vue-cli 默认推荐2种规范</li>
+		<li><a target="_blank" href="https://github.com/standard/standard">standard</a> 14000+ stars 相对激进</li>
+		<li><a target="_blank" href="https://github.com/airbnb/javascript">airbnb</a> 61000+ stars 相对保守</li>
+		<li>我们选择 airbnb</li>
+	</ul>
+</section>
+
+<section>
+	<h2>编辑器呈现警告</h2>
+	<img src="images/eslint-editor.jpg" />
+</section>
+
+<section>
+	<h2>页面呈现警告</h2>
+	<img src="images/eslint-html.jpg" />
+</section>
+
+<section>
+	<h2>控制台呈现警告</h2>
+	<img src="images/eslint-console.jpg" />
+</section>
+
+<section>
+	<h2>关掉让我很不舒服的警告</h2>
+	<img src="images/eslint-rule.jpg" />
+</section>
+
+<section>
+	<h2>CSS规范</h2>
+	<ul>
+		<li>可复用模块，ui模块遵循BEM</li>
+		<li>观察 element-ui 都是遵循 BEM 的</li>
+		<li>业务遵循5层架构</li>
+	</ul>
+</section>
+
+<section>
+	<h2>5层架构</h2>
+	<ul>
+		<li>l-: 布局样式模块</li>
+		<li>p-: pagelet 路由模块，不可复用</li>
+		<li>v-: 可复用业务模块</li>
+		<li>u-: UI模块样式</li>
+		<li>k-: 工具样式</li>
+	</ul>
+</section>
+
+<section>
+	<h2>5层架构-pagelet</h2>
+	<img src="images/css-pagelet.jpg" style="width: 60%;" />
+</section>
+
+<section>
+	<h2>html规范</h2>
+	<p>推荐pug</p>
+	<img src="images/code-pug.jpg" />
+</section>
+
+<section>
+	<h2>pug使用</h2>
+	<ul>
+		<li>注意组件属性都是折行书写的</li>
+		<li>SublimeText pug 语法渲染有bug</li>
+		<li>不折行会渲染错误</li>
+		<li>折行有助于代码整洁度</li>
+	</ul>
+</section>
+
+<section>
+	<h2>目录规范</h2>
+	<ul>
+		<li>路由组件放在 src/pagelet</li>
+		<li>模块组件在 src/mods</li>
+		<li>数据模型在 src/model</li>
+		<li>路由组件在 src/router</li>
+		<li>vuex store 在 src/store</li>
+		<li>工具函数在 src/util</li>
+		<li>请求统一包装在 src/io</li>
+	</ul>
+</section>
+
+<section>
+	<h2>额外规范</h2>
+	<img src="images/import-standard.jpg" />
+</section>
+
+<section>
+	<h2>规范的意义</h2>
+	<ul>
+		<li>统一代码风格</li>
+		<li>减少出错</li>
+		<li>便于调试与维护</li>
+	</ul>
+</section>
+
+<section>
+	<h2>框架搭建</h2>
+	<p>真正动手开发的步骤从这里开始</p>
+</section>
+
+<section>
+	<h2>图标方案目标</h2>
+	<ul>
+		<li>引入简便</li>
+		<li>方便维护</li>
+		<li>方便开发</li>
+		<li>方案可复用到下个项目</li>
+	</ul>
+</section>
+
+<section>
+	<h2>webpack 配置</h2>
+	<ul>
+		<li>使用svg做图标</li>
+		<li>使用 svg-sprite-loader</li>
+	</ul>
+	<img src="images/svg-sprite-loader.jpg" />
+</section>
+
+<section>
+	<h2>图标引入</h2>
+	<img src="images/svg-js.jpg" />
+</section>
+
+<section>
+	<h2>任务生成svg.js</h2>
+	<img src="images/svg-gen.jpg" />
+</section>
+
+<section>
+	<h2>图标使用</h2>
+	<img src="images/svg-use.jpg" />
+</section>
+
+<section>
+	<h2>开发一个node接口生成图标数据</h2>
+	<img src="images/svg-mock.jpg" />
+</section>
+
+<section>
+	<h2>开发一个页面提供图标列表</h2>
+	<img src="images/svg-demo.jpg" />
+</section>
+
+<section>
+	<h2>数据Mock问题</h2>
+	<ul>
+		<li>本来有内网RAP服务</li>
+		<li>奈何外包无法访问</li>
+		<li>幸好之前有开发过<a target="_blank" href="https://github.com/SporeUI/spore-mock">spore-mock</a></li>
+	</ul>
+</section>
+
+<section>
+	<h2>数据Mock目标</h2>
+	<ul>
+		<li>结合 mockjs 生成随机数据</li>
+		<li>node开发，简单代码配置接口</li>
+		<li>实现数据说明，简单暴力直接有效</li>
+		<li>代码在本地，为所欲为</li>
+	</ul>
+</section>
+
+<section>
+	<h2>Mock数据配置</h2>
+	<p>chrome json-view</p>
+	<img src="images/mock-design.jpg" />
+</section>
+
+<section>
+	<h2>接口配置目标</h2>
+	<ul>
+		<li>可以快速切换调试环境</li>
+		<li>易配置，易修改</li>
+		<li>采用策略模式</li>
+	</ul>
+</section>
+
+<section>
+	<h2>接口集中管理</h2>
+	<img src="images/model-api-obj.jpg" />
+	<img src="images/model-api-config.jpg" />
+	<img src="images/model-api-code.jpg" />
+</section>
+
+<section>
+	<h2>调试环境切换</h2>
+	<img src="images/env-js.jpg" />
+</section>
+
+<section>
+	<h2>接口请求目标</h2>
+	<ul>
+		<li>解决 Mock 接口请求数据与实际接口不一致的问题</li>
+		<li>易配置，易修改</li>
+		<li>采用适配器模式</li>
+	</ul>
+</section>
+
+<section>
+	<h2>统一请求接口</h2>
+	<div style="overflow-y: auto; width:100%; height:70vh;">
+		<img src="images/code-request.jpg" style="max-height: initial;" />
+	</div>
+</section>
+
+<section>
+	<h2>定制接口服务</h2>
+	<img src="images/code-req-demo.jpg" style="height: 70vh;" />
+</section>
+
+<section>
+	<h2>实际请求</h2>
+	<img src="images/code-demo-req.jpg" style="height: 70vh;" />
+</section>
+
+<section>
+	<h1>THE END</h1>
+	<p>
+		<a target="_blank" href="https://github.com/TabSpace/reveal-VUE_ADMIN">TabSpace/reveal-VUE_ADMIN</a>
+	</p>
+</section>
+
+</div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+// More info https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+	controls: true,
+	progress: true,
+	history: true,
+	center: true,
+
+	allottedTime: 45 * 60 * 1000,
+
+	transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+	// More info https://github.com/hakimel/reveal.js#dependencies
+	dependencies: [
+		{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+		{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+		{ src: 'plugin/zoom-js/zoom.js', async: true },
+		{ src: 'plugin/notes/notes.js', async: true },
+		{ src: 'plugin/elapsed-time-bar/elapsed-time-bar.js'}
+	]
+});
+</script>
+
+</body>
+</html>

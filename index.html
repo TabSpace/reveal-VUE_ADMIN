@@ -49,7 +49,8 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 <div class="slides">
 
 <section>
-	<h1>如何学习VUE</h1>
+	<h1>如何学习和应用VUE</h1>
+	<p>以一个后台前端开发项目为例</p>
 	<p>
 		<small>
 			<a target="_blank" href="https://github.com/TabSpace">github.com/TabSpace</a>
@@ -132,7 +133,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 		<li>连带加班19个工作日</li>
 		<li>48个接口</li>
 		<li>110个模块文件(js,vue,less)</li>
-		<li>12524行代码(样式只有500多行)</li>
+		<li>12524行代码</li>
 	</ul>
 </section>
 
@@ -154,7 +155,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 
 <section>
 	<h2>如何在3天内学会VUE</h2>
-	<p>并可以在组员面前装X</p>
+	<p>并可以在别人面前装X</p>
 </section>
 
 <section>
@@ -212,6 +213,12 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 <section>
 	<h2>技术选型</h2>
 	<p>最重要的东西是什么？</p>
+</section>
+
+<section>
+	<h2>时间！</h2>
+	<h2>时间！</h2>
+	<h2>时间！</h2>
 </section>
 
 <section>
@@ -463,6 +470,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 	<ul>
 		<li>解决 Mock 接口请求数据与实际接口不一致的问题</li>
 		<li>易配置，易修改</li>
+		<li>统一处理信息提示</li>
 		<li>采用适配器模式</li>
 	</ul>
 </section>
@@ -482,6 +490,147 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 <section>
 	<h2>实际请求</h2>
 	<img src="images/code-demo-req.jpg" style="height: 70vh;" />
+</section>
+
+<section>
+	<h2>广播限制</h2>
+	<ul>
+		<li>全局变量是魔鬼</li>
+		<li>全局广播也是</li>
+		<li>重写vue-bus，添加白名单</li>
+		<li>实现非vue组件发起广播</li>
+	</ul>
+</section>
+
+<section>
+	<h2>bus</h2>
+	<div style="overflow-y: auto; width:100%; height:70vh;">
+		<img src="images/code-bus.jpg" style="max-height: initial;" />
+	</div>
+</section>
+
+<section>
+	<h2>bus白名单</h2>
+	<img src="images/code-whitelist.jpg" style="height: 70vh;" />
+</section>
+
+<section>
+	<h2>调试体验优化</h2>
+	<ul>
+		<li>AOP模式</li>
+		<li>在 env.js 配置 url 参数开关</li>
+	</ul>
+</section>
+
+<section>
+	<h2>logger</h2>
+	<div style="overflow-y: auto; width:100%; height:70vh;">
+		<img src="images/code-logger.jpg" style="max-height: initial;" />
+	</div>
+</section>
+
+<section>
+	<h2>logger开关</h2>
+	<img src="images/logger-switch.jpg" style="height: 70vh;" />
+</section>
+
+<section>
+	<h2>进度体验优化</h2>
+	<img src="images/vue-progress.jpg" />
+</section>
+
+<section>
+	<h2>配置方案</h2>
+	<ul>
+		<li>统一接口请求的好处</li>
+		<li>在 request api 配置进度</li>
+		<li>在 vue-router 配置进度</li>
+	</ul>
+</section>
+
+<section>
+	<h2>vue-progress</h2>
+	<div style="overflow-y: auto; width:100%; height:70vh;">
+		<img src="images/code-progress.jpg" style="max-height: initial;" />
+	</div>
+</section>
+
+<section>
+	<h2>按需加载模块</h2>
+	<img src="images/async-comp.jpg" />
+</section>
+
+<section>
+	<h2>按需加载模块</h2>
+	<p>JS:269Kb CSS:44.8Kb</p>
+	<div style="overflow-y: auto; width:100%; height:70vh;">
+		<img src="images/jia-admin-timeline.jpg" style="max-height: initial;" />
+	</div>
+</section>
+
+<section>
+	<h2>其他杂事</h2>
+</section>
+
+<section>
+	<h2>反向代理</h2>
+	<img src="images/proxy-table.jpg" />
+</section>
+
+<section>
+	<h2>解决静态文件部署上传问题</h2>
+	<div style="overflow-y: auto; width:100%; height:70vh;">
+		<img src="images/gulp-upload.jpg" style="max-height: initial;" />
+	</div>
+</section>
+
+<section>
+	<h2>IE9报错处理</h2>
+	<img src="images/code-err-client.jpg" />
+</section>
+
+<section>
+	<h2>替换polyfill</h2>
+	<img src="images/ie9-dep.jpg" />
+</section>
+
+<section>
+	<h2>更换代码</h2>
+	<img src="images/code-dev-client.jpg" />
+</section>
+
+<section>
+	<h2>项目在win环境启动缓慢</h2>
+	<img src="images/ignore-check-versions.jpg" />
+</section>
+
+<section>
+	<h2>总结</h2>
+	<p>大家先谈谈有什么感受</p>
+</section>
+
+<section>
+	<h2>个人理解的修炼</h2>
+	<ul>
+		<li>将对一个前端产品的理解贯彻到项目中</li>
+		<li>完善规范，改进开发体验细节</li>
+		<li>应用设计模式在实际开发中</li>
+		<li>VUE作者强在哪里？</li>
+	</ul>
+</section>
+
+<section>
+	<h2>感悟：如何提升自己</h2>
+	<ul>
+		<li>如果把前端码农比作农民</li>
+		<li>执着于框架的优劣，如同争论哪个拖拉机收割更快</li>
+		<li>能赚钱的农民要了解种植到销售的全流程</li>
+		<li>工程师也应当建立体系化思维</li>
+		<li>阿当的冷水泼的有道理，虽然部分偏激</li>
+		<li>框架和语言是为你服务的，不要反过来</li>
+		<li>造轮子来学东西，按需造轮子来做事</li>
+		<li>提升眼界，解放自己，做更有价值的事情</li>
+	</ul>
 </section>
 
 <section>
